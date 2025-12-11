@@ -4,3 +4,4 @@ numpy
 plotly
 SQLAlchemy
 psycopg2-binary
+pymongo
