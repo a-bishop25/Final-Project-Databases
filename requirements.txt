@@ -3,3 +3,4 @@ pandas
 numpy
 plotly
 SQLAlchemy
+psycopg2-binary
