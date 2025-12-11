@@ -2,7 +2,7 @@ from pymongo import MongoClient
 import pandas as pd
 import os
 # Replace with your actual MongoDB Atlas connection string
-MONGO_URI = "mongodb+srv://abishop25_db_user:5J7qJlNNtg5gudAf@cluster0.szrzgd6.mongodb.net/?appName=Cluster0"
+MONGO_URI = "mongodb+srv://abishop25_db_user:<password>@cluster0.szrzgd6.mongodb.net/?appName=Cluster0"
 
 # Connect to the cluster
 client = MongoClient(MONGO_URI)
