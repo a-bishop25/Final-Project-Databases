@@ -16,7 +16,7 @@ Database Architecture
 The database municipal_bonds is designed to answer questions about risk and return in the public sector.
 
 Schema Diagram
-(Ensure the file ERdiagram_mb.png is in your repository folder)
+
 Table Descriptions
 Table
 Type
@@ -49,22 +49,29 @@ municipal_schema.sql: The DDL script. Creates tables, primary keys, foreign keys
 municipal_triggers.sql: Contains the PL/pgSQL functions and triggers for the audit logging system.
 load.py: The ETL script. Connects to the database and bulk-loads the CSV files in the correct dependency order.
 MuniBonds_dashboard.py: The Streamlit Python application for the interactive dashboard.
+
 Data Files (Raw Source)
 issuers.csv, bonds.csv, bond_purposes.csv, trades.csv, credit_ratings.csv, economic_indicators.csv
+
 Analysis Files
 municipal_bonds_analysis.sql: A collection of the advanced SQL queries used to power the dashboard visuals.
 Setup & Installation
 Follow these steps to replicate the environment locally.
+
 Prerequisites
-PostgreSQL (v13 or higher)
-Python (v3.8 or higher)
-PgAdmin 4 (Optional, for GUI management)
-Step 1: Database Creation
+PostgreSQL 
+Python 
+PgAdmin 4 
+
+
+Step 1:
+Database Creation
 Open your terminal or SQL tool (PgAdmin) and create the database:
 CREATE DATABASE municipal_bonds;
 
 
-Step 2: Create Schema & Triggers
+Step 2:
+Create Schema & Triggers
 Run the schema script to build the tables, then the trigger script to enable auditing.
 # Run schema first
 psql -U postgres -d municipal_bonds -f municipal_schema.sql
@@ -74,24 +81,27 @@ psql -U postgres -d municipal_bonds -f municipal_triggers.sql
 
 
 (Alternatively, open these files in PgAdmin and execute them manually.)
-Step 3: Install Python Dependencies
+Step 3: 
+Install Python Dependencies
 Ensure you have the required libraries for ETL and the Dashboard:
 pip install pandas sqlalchemy psycopg2-binary plotly streamlit
 
 
-Step 4: Load Data
+Step 4: 
+Load Data
 Run the Python loader.
 Note: Ensure DB_PORT in load.py matches your local Postgres port (default is 5432, this project uses 5433).
 python load.py
 
 
 You should see success messages for connecting and loading each table.
-Step 5: Launch the Dashboard
+Step 5: 
+Launch the Dashboard
 Start the interactive application:
 streamlit run MuniBonds_dashboard.py
 
 
-The dashboard will open in your default browser (usually at http://localhost:8501).
+The dashboard will open in your default browser locally.
 How to Run the Analysis (SQL)
 If you prefer to run raw SQL queries instead of using the dashboard:
 Open your SQL client (e.g., PgAdmin, DBeaver).
