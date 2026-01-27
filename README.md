@@ -142,4 +142,12 @@ Yield Spread Calculation: Compares municipal yields against the "risk-free" 10-Y
 
 Liquidity Analysis: Identifies the most actively traded long-duration bonds.
 
+
 Credit Risk Trends: Analyzing rating outlook changes (Positive vs. Negative) over time.
+
+Professor Evaluation:
+
+For the final project, Avery worked as part of a three-person team (with Mark Crisci and Muhammed Altindal) to deliver an exceptional municipal bonds database analysis that demonstrated professional-level database engineering skills. The team implemented a star schema architecture with proper 3NF normalization across 6 main tables plus audit logs, showing mastery of data warehousing principles.
+
+
+The database design was exemplary, featuring advanced constraints including regex validation for state codes, business rule enforcement for date ordering, and range validation for rates. Most impressively, the team implemented PL/pgSQL triggers for audit logging, demonstrating understanding of database features. 
